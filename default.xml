@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="xdroid"
+           fetch="https://github.com/xdroid-CAF/"
+           revision="eleven"/>
+
+  <remote  name="xyzuan-gitlab"
+           fetch="https://gitlab.com/xyzuan/"
+           revision="eleven"/>
+
+  <project path="xd-merge/build/make" name="build_make" remote="xdroid" />
+  <project path="xd-merge/build/blueprint" name="build_blueprint" remote="xdroid"/>
+  <project path="xd-merge/build/soong" name="build_soong" remote="xdroid" />
+  <project path="xd-merge/frameworks/av" name="frameworks_av" remote="xdroid"/>
+  <project path="xd-merge/frameworks/base" name="frameworks_base" remote="xdroid"/>
+  <project path="xd-merge/frameworks/native" name="frameworks_native" remote="xdroid"/>
+  <project path="xd-merge/hardware/interfaces" name="hardware_interfaces" remote="xdroid"/>
+  <project path="xd-merge/packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="xdroid"/>
+  <project path="xd-merge/packages/apps/Settings" name="packages_apps_Settings" remote="xdroid"/>
+  <project path="xd-merge/device/xdroid/sepolicy" name="device_xdroid_sepolicy" remote="xdroid"/>
+  <project path="xd-merge/system/core" name="system_core" remote="xdroid"/>
+  <project path="xd-merge/vendor/qcom/opensource/usb" name="vendor_qcom_opensource_usb" remote="xdroid"/>
+  <project path="xd-merge/vendor/qcom/opensource/commonsys/system/bt" name="vendor_qcom_opensource_commonsys_system_bt" remote="xdroid"/>
+  <project path="xd-merge/vendor/qcom/opensource/commonsys/packages/apps/Bluetooth" name="vendor_qcom_opensource_commonsys_packages_apps_Bluetooth" remote="xdroid" revision="eleven-qti"/>
+
+</manifest>

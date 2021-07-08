@@ -1,0 +1,21 @@
+kind: pipeline
+name : xdroid Source Updater
+version: rev0.1 alpha
+steps:
+ - name: Update
+   image: xyzuan/xdocker:latest
+   environment:
+     TG_TOKEN:
+       from_secret: TG_TOKEN
+     TG_CHAT_ID:
+       from_secret: TG_CHAT_ID
+     GH_USERNAME:
+       from_secret: GH_USERNAME
+     GH_EMAIL:
+       from_secret: GH_EMAIL
+     GH_TOKEN:
+       from_secret: GH_TOKEN
+     GH_PUSH_REPO_URL:
+       from_secret: GH_PUSH_REPO_URL
+   commands:
+     - bash merge.sh
