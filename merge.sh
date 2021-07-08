@@ -4,6 +4,19 @@
 #
 
 CAF_TAG=LA.QSSI.11.0.r1-12400.02-qssi.0
+SOURCE=https://github.com/xdroid-CAF
+
+# Inlined function to post a message
+export BOT_MSG_URL="https://api.telegram.org/bot$TG_TOKEN/sendMessage"
+tg_post_msg() {
+	curl -s -X POST "$BOT_MSG_URL" -d chat_id="$TG_CHAT_ID" \
+	-d "disable_web_page_preview=true" \
+	-d "parse_mode=html" \
+	-d text="$1"
+}
+
+# Send Upstream Source Information
+tg_post_msg "<b>xdroid Source Updater</b>%0A<b>CAF REVISION TAG</b>: <code>${CAF_TAG}</code>%0A<b>XDROID SOURCE</b>: <code>${SOURCE}</code>"
 
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/build_make" $(pwd)/build/make
 cd $(pwd)/build/make
@@ -88,3 +101,5 @@ git remote add caf https://source.codeaurora.org/quic/la/platform/vendor/qcom-op
 git push
 cd ../../..
 rm -rf $(pwd)/vendor/apps/Bluetooth
+
+tg_post_msg "<b>xdroid Source Updater</b>%0A<code>Source successfull upstreamed</code>"
