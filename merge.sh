@@ -65,12 +65,6 @@ git remote add caf https://source.codeaurora.org/quic/la/platform/system/core &&
 git push
 rm -rf $(pwd)/system/core
 
-git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/vendor_qcom_opensource_usb" $(pwd)/vendor/qcom/opensource/usb
-cd $(pwd)/vendor/qcom/opensource/usb
-git remote add caf https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/usb && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
-git push
-rm -rf $(pwd)/vendor/qcom/opensource/usb
-
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/vendor_qcom_opensource_commonsys_system_bt" $(pwd)/vendor/qcom/opensource/commonsys/system/bt
 cd $(pwd)/vendor/qcom/opensource/commonsys/system/bt
 git remote add caf https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/system/bt && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
