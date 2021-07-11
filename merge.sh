@@ -3,6 +3,9 @@
 # Copyright (C) 2021 a xyzprjkt property
 #
 
+XDROID_VERSION=rev1.0
+XDROID_CODENAME=Redstone
+XDROID_REVISION=xd_${XDROID_VERSION}.${XDROID_CODENAME}
 CAF_TAG=LA.QSSI.11.0.r1-12400.02-qssi.0
 SOURCE=https://github.com/xdroid-CAF
 
@@ -16,7 +19,7 @@ tg_post_msg() {
 }
 
 # Send Upstream Source Information
-tg_post_msg "<b>xdroid Source Updater</b>%0A<b>CAF REVISION TAG</b>: <code>${CAF_TAG}</code>%0A<b>XDROID SOURCE</b>: <code>${SOURCE}</code>"
+tg_post_msg "<b>xdroid Source Updater</b>%0A<b>xdroid Revision</b>: <code>${XDROID_REVISION}</code>%0A<b>CAF Revision</b>: <code>${CAF_TAG}</code>%0A<b>xdroid Version</b>: <code>${XDROID_VERSION}</code>%0A<b>xdroid Codename</b>: <code>${XDROID_CODENAME}</code>"
 
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/build_make" $(pwd)/build/make
 cd $(pwd)/build/make
