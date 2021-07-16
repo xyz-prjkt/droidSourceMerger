@@ -88,7 +88,7 @@ rm -rf $(pwd)/frameworks/opt/net_wifi
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_frameworks_opt_timezonepicker" $(pwd)/frameworks/opt/timezonepicker
 cd $(pwd)/frameworks/opt/timezonepicker
 git checkout -b staging-${CAF_TAG}
-git remote add caf https://source.codeaurora.org/quic/la/platform/frameworks/opttimezonepicker && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add caf https://source.codeaurora.org/quic/la/platform/frameworks/opt/timezonepicker && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${CAF_TAG}
 cd ../../..
 rm -rf $(pwd)/frameworks/opt/timezonepicker
