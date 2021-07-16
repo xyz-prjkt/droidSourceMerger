@@ -157,6 +157,38 @@ git push -f origin staging-${CAF_TAG}
 cd ../..
 rm -rf $(pwd)/external/zlib
 
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_external_icu" $(pwd)/external/icu
+cd $(pwd)/external/icu
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/external/icu && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../..
+rm -rf $(pwd)/external/icu
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_external_json-c" $(pwd)/external/json-c
+cd $(pwd)/external/json-c
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/external/json-c && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../..
+rm -rf $(pwd)/external/json-c
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_external_wpa_supplicant_8" $(pwd)/external/wpa_supplicant_8
+cd $(pwd)/external/wpa_supplicant_8
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/external/wpa_supplicant_8 && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../..
+rm -rf $(pwd)/external/wpa_supplicant_8
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_external_cldr" $(pwd)/external/cldr
+cd $(pwd)/external/cldr
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/external/cldr && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../..
+rm -rf $(pwd)/external/cldr
+
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_hardware_interfaces" $(pwd)/hardware/interfaces
 cd $(pwd)/hardware/interfaces
 git checkout -b staging-${CAF_TAG}
@@ -180,6 +212,39 @@ git remote add caf https://source.codeaurora.org/quic/la/platform/packages/apps/
 git push -f origin staging-${CAF_TAG}
 cd ../../..
 rm -rf $(pwd)/packages/apps/Settings
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_packages_apps_CellBroadcastReceiver" $(pwd)/packages/apps/CellBroadcastReceiver
+cd $(pwd)/packages/apps/CellBroadcastReceiver
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/packages/apps/CellBroadcastReceiver && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../../..
+rm -rf $(pwd)/packages/apps/CellBroadcastReceiver
+
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_packages_services_Telephony" $(pwd)/packages/services/Telephony
+cd $(pwd)/packages/services/Telephony
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/packages/services/Telephony && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../../..
+rm -rf $(pwd)/packages/services/Telephony
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_packages_providers_TelephonyProvider" $(pwd)/packages/providers/TelephonyProvider
+cd $(pwd)/packages/providers/TelephonyProvider
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/packages/providers/TelephonyProvider && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../../..
+rm -rf $(pwd)/packages/providers/TelephonyProvider
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_packages_providers_ContactsProvider" $(pwd)/packages/providers/ContactsProvider
+cd $(pwd)/packages/providers/ContactsProvider
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/packages/providers/ContactsProvider && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../../..
+rm -rf $(pwd)/packages/providers/ContactsProvider
 
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_art" $(pwd)/art
 cd $(pwd)/art
