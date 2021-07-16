@@ -69,6 +69,94 @@ git push -f origin staging-${CAF_TAG}
 cd ../..
 rm -rf $(pwd)/frameworks/native
 
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_frameworks_opt_net_ims" $(pwd)/frameworks/opt/net_ims
+cd $(pwd)/frameworks/opt/net_ims
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/frameworks/opt/net/ims && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../../..
+rm -rf $(pwd)/frameworks/opt/net_ims
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_frameworks_opt_net_wifi" $(pwd)/frameworks/opt/net_wifi
+cd $(pwd)/frameworks/opt/net_wifi
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/frameworks/opt/net/wifi && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../../..
+rm -rf $(pwd)/frameworks/opt/net_wifi
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_frameworks_opt_timezonepicker" $(pwd)/frameworks/opt/timezonepicker
+cd $(pwd)/frameworks/opt/timezonepicker
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/frameworks/opttimezonepicker && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../../..
+rm -rf $(pwd)/frameworks/opt/timezonepicker
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_frameworks_opt_telephony" $(pwd)/frameworks/opt/telephony
+cd $(pwd)/frameworks/opt/telephony
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/frameworks/opt/telephony && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../../..
+rm -rf $(pwd)/frameworks/opt/telephony
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_external_scudo" $(pwd)/external/scudo
+cd $(pwd)/external/scudo
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/external/scudo && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../..
+rm -rf $(pwd)/external/scudo
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_external_iptables" $(pwd)/external/iptables
+cd $(pwd)/external/iptables
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/external/iptables && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../..
+rm -rf $(pwd)/external/iptables
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_external_libcxx" $(pwd)/external/libcxx
+cd $(pwd)/external/libcxx
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/external/libcxx && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../..
+rm -rf $(pwd)/external/libcxx
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_external_scudo" $(pwd)/external/libpng
+cd $(pwd)/external/libpng
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/external/libpng && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../..
+rm -rf $(pwd)/external/libpng
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_external_nos_host_generic" $(pwd)/external/nos_host_generic
+cd $(pwd)/external/nos_host_generic
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/external/nos/host/generic && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../..
+rm -rf $(pwd)/external/nos_host_generic
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_external_tinycompress" $(pwd)/external/tinycompress
+cd $(pwd)/external/tinycompress
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/external/tinycompress && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../..
+rm -rf $(pwd)/external/tinycompress
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_external_zlib" $(pwd)/external/zlib
+cd $(pwd)/external/zlib
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/external/zlib && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../..
+rm -rf $(pwd)/external/zlib
+
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_hardware_interfaces" $(pwd)/hardware/interfaces
 cd $(pwd)/hardware/interfaces
 git checkout -b staging-${CAF_TAG}
@@ -184,7 +272,7 @@ rm -rf $(pwd)/vendor/qcom/system/bt
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_vendor_qcom_opensource_commonsys_packages_apps_Bluetooth" $(pwd)/vendor/qcom/apps/Bluetooth
 cd $(pwd)/vendor/qcom/apps/Bluetooth
 git checkout -b staging-${CAF_TAG}
-git remote add caf https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/apps/Bluetooth && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add caf https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/packages/apps/Bluetooth && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${CAF_TAG}
 cd ../../..
 rm -rf $(pwd)/vendor/qcom/apps/Bluetooth
