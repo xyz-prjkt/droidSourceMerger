@@ -3,10 +3,10 @@
 # Copyright (C) 2021 a xyzprjkt property
 #
 
-XDROID_VERSION=rev1.0
+XDROID_VERSION=rev1.2
 XDROID_CODENAME=Redstone
 XDROID_REVISION=xd_${XDROID_VERSION}.${XDROID_CODENAME}
-CAF_TAG=LA.QSSI.11.0.r1-12600-qssi.0
+CAF_TAG=LA.QSSI.11.0.r1-12700-qssi.0
 SOURCE=https://github.com/xdroid-CAF
 
 # Inlined function to post a message
