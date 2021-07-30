@@ -6,7 +6,7 @@
 XDROID_VERSION=rev1.2
 XDROID_CODENAME=Redstone
 XDROID_REVISION=xd_${XDROID_VERSION}.${XDROID_CODENAME}
-CAF_TAG=LA.QSSI.11.0.r1-12700-qssi.0
+CAF_TAG=LA.QSSI.11.0.r1-12700.01-qssi.0
 SOURCE=https://github.com/xdroid-CAF
 
 # Inlined function to post a message
@@ -331,7 +331,7 @@ cd $(pwd)/vendor/qcom/system/bt
 git checkout -b staging-${CAF_TAG}
 git remote add caf https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/system/bt && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${CAF_TAG}
-cd ../../..
+cd ../../../..
 rm -rf $(pwd)/vendor/qcom/system/bt
 
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_vendor_qcom_opensource_commonsys_packages_apps_Bluetooth" $(pwd)/vendor/qcom/apps/Bluetooth
@@ -339,7 +339,16 @@ cd $(pwd)/vendor/qcom/apps/Bluetooth
 git checkout -b staging-${CAF_TAG}
 git remote add caf https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/packages/apps/Bluetooth && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${CAF_TAG}
-cd ../../..
+cd ../../../..
 rm -rf $(pwd)/vendor/qcom/apps/Bluetooth
+
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_packages_apps_ThemePicker" $(pwd)/packages/apps/ThemePicker
+cd $(pwd)/packages/apps/ThemePicker
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/packages/apps/ThemePicker && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../../..
+rm -rf $(pwd)/packages/apps/ThemePicker
 
 tg_post_msg "<b>xdroid Source Updater</b>%0A<code>Source successfull upstreamed</code>"
