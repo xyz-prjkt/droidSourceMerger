@@ -3,10 +3,10 @@
 # Copyright (C) 2021 a xyzprjkt property
 #
 
-XDROID_VERSION=rev1.4
+XDROID_VERSION=rev1.5.5
 XDROID_CODENAME=redwhite
 XDROID_REVISION=xd_${XDROID_VERSION}.${XDROID_CODENAME}
-CAF_TAG=LA.QSSI.11.0.r1-13200-qssi.0
+CAF_TAG=LA.QSSI.11.0.r1-13300-qssi.0
 SOURCE=https://github.com/xdroid-CAF
 
 # Inlined function to post a message
@@ -212,6 +212,14 @@ git remote add caf https://source.codeaurora.org/quic/la/platform/packages/apps/
 git push -f origin staging-${CAF_TAG}
 cd ../../..
 rm -rf $(pwd)/packages/apps/Settings
+
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_packages_apps_SettingsIntelligence" $(pwd)/packages/apps/SettingsIntelligence
+cd $(pwd)/packages/apps/SettingsIntelligence
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/packages/apps/SettingsIntelligence && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../../..
+rm -rf $(pwd)/packages/apps/SettingsIntelligence
 
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_packages_apps_CellBroadcastReceiver" $(pwd)/packages/apps/CellBroadcastReceiver
 cd $(pwd)/packages/apps/CellBroadcastReceiver
