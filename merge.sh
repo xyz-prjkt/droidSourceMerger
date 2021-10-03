@@ -334,6 +334,14 @@ git push -f origin staging-${CAF_TAG}
 cd ../..
 rm -rf $(pwd)/system/bt
 
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_vendor_qcom_opensource_interfaces" $(pwd)/vendor/qcom/opensource/interfaces
+cd $(pwd)/vendor/qcom/opensource/interfaces
+git checkout -b staging-${CAF_TAG}
+git remote add caf https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/interfaces && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git push -f origin staging-${CAF_TAG}
+cd ../../../..
+rm -rf $(pwd)/vendor/qcom/opensource/interfaces
+
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_vendor_qcom_opensource_commonsys_system_bt" $(pwd)/vendor/qcom/system/bt
 cd $(pwd)/vendor/qcom/system/bt
 git checkout -b staging-${CAF_TAG}
