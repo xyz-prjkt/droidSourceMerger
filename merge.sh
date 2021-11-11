@@ -350,7 +350,7 @@ git push -f origin staging-${CAF_TAG}
 cd ../../../..
 rm -rf $(pwd)/vendor/qcom/system/bt
 
-git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_vendor_qcom_opensource_commonsys_packages_apps_Bluetooth" -b eleven $(pwd)/vendor/qcom/apps/Bluetooth
+git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-CAF/xd_vendor_qcom_opensource_commonsys_packages_apps_Bluetooth" -b eleven-qti $(pwd)/vendor/qcom/apps/Bluetooth
 cd $(pwd)/vendor/qcom/apps/Bluetooth
 git checkout -b staging-${CAF_TAG}
 git remote add caf https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/packages/apps/Bluetooth && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
