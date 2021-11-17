@@ -6,7 +6,7 @@
 XDROID_VERSION=rev1.7
 XDROID_CODENAME=redwhite
 XDROID_REVISION=xd_${XDROID_VERSION}.${XDROID_CODENAME}
-CAF_TAG=LA.QSSI.11.0.r1-13700-qssi.0
+CAF_TAG=LA.QSSI.11.0.r1-13800-qssi.0
 SOURCE=https://github.com/xdroid-CAF
 
 # Inlined function to post a message
