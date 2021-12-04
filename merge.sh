@@ -20,7 +20,7 @@ tg_post_msg() {
 }
 
 # Send Upstream Source Information
-tg_post_msg "<b>xdroid Source Updater</b>%0A<b>xdroid Revision</b>: <code>${XDROID_REVISION}</code>%0A<b>CAF Revision</b>: <code>${CAF_TAG}</code>%0A<b>xdroid Version</b>: <code>${XDROID_VERSION}</code>%0A<b>xdroid Codename</b>: <code>${XDROID_CODENAME}</code>"
+tg_post_msg "<b>xdroid Source Updater</b>%0A<b>xdroid Revision</b>: <code>${XDROID_REVISION}</code>%0A<b>AOSP Revision</b>: <code>${AOSP_TAG}</code>%0A<b>xdroid Version</b>: <code>${XDROID_VERSION}</code>%0A<b>xdroid Codename</b>: <code>${XDROID_CODENAME}</code>"
 
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_bionic" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
