@@ -25,7 +25,7 @@ tg_post_msg "<b>xdroid Source Updater</b>%0A<b>xdroid Revision</b>: <code>${XDRO
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_bionic" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/bionic && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/bionic && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -33,7 +33,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_build" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/build && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/build && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -41,7 +41,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_build_soong" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/build/soong && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/build/soong && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -49,7 +49,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_external_tinycompress" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/external/tinycompress && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/external/tinycompress && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -57,7 +57,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_external_tinyxml" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/external/tinyxml && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/external/tinyxml && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -65,7 +65,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_external_selinux" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/external/selinux && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/external/selinux && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -73,7 +73,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_external_themelib" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/external/themelib && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/external/themelib && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -81,7 +81,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_external_colorkt" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/external/colorkt && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/external/colorkt && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -89,7 +89,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_frameworks_base" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/frameworks/base && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/frameworks/base && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -97,7 +97,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_hardware_libhardware" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/hardware/libhardware && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/hardware/libhardware && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -105,7 +105,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_frameworks_base" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/frameworks/base && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/frameworks/base && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -113,7 +113,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_packages_apps_Settings" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/packages/apps/Settings && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/packages/apps/Settings && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -121,7 +121,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_packages_apps_ThemePicker" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/packages/apps/ThemePicker && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/packages/apps/ThemePicker && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -129,7 +129,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_packages_apps_Launcher3" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/packages/apps/Launcher3 && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/packages/apps/Launcher3 && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -137,7 +137,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_packages_modules_Connectivity" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/packages/modules/Connectivity && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/packages/modules/Connectivity && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -145,7 +145,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_packages_modules_Permission" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/packages/modules/Permission && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/packages/modules/Permission && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -153,7 +153,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_system_core" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/system/core && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/system/core && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
@@ -161,7 +161,7 @@ rm -rf $(pwd)/temp
 git clone "https://$GH_USERNAME:$GH_TOKEN@github.com/xdroidsp/xd_libcore" $(pwd)/temp -b ${XDROID_BRANCH}
 cd $(pwd)/temp
 git checkout -b staging-${AOSP_TAG}
-git remote add aosp https://android.googlesource.com/platform/libcore && git fetch caf ${CAF_TAG} && git merge FETCH_HEAD
+git remote add aosp https://android.googlesource.com/platform/libcore && git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
 git push -f origin staging-${AOSP_TAG}
 cd ../
 rm -rf $(pwd)/temp
