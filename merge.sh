@@ -6,7 +6,7 @@
 XDROID_VERSION=rev2.0
 XDROID_CODENAME=mnmlistyou
 XDROID_REVISION=xd_${XDROID_VERSION}.${XDROID_CODENAME}
-CAF_TAG=LA.QSSI.12.0.r1-04900.03-qssi.0
+CAF_TAG=LA.QSSI.12.0.r1-05000.01-qssi.0
 SOURCE=https://github.com/xdroid-CAF
 
 # Inlined function to post a message
