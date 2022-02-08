@@ -6,7 +6,7 @@
 XDROID_VERSION=r2
 XDROID_REVISION=INA.XD.12.${XDROID_VERSION}
 XDROID_BRANCH=twelve
-XDROID_SOURCE=https://github.com/xdroid-oss
+XDROID_SOURCE=github.com/xdroid-oss
 AOSP_TAG=android-12.0.0_r29
 
 # Inlined function to post a message
