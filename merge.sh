@@ -7,7 +7,7 @@ XDROID_VERSION=r2
 XDROID_REVISION=INA.XD.12.${XDROID_VERSION}
 XDROID_BRANCH=twelve
 XDROID_SOURCE=github.com/xdroid-oss
-AOSP_TAG=android-12.0.0_r29
+AOSP_TAG=android-12.0.0_r31
 
 # Inlined function to post a message
 export BOT_MSG_URL="https://api.telegram.org/bot$TG_TOKEN/sendMessage"
