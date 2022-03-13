@@ -4,7 +4,7 @@
 #
 
 XDROID_VERSION=r5
-XDROID_BRANCH_OLD=twelve-android-12.1.0
+XDROID_BRANCH_OLD=twelve-android-12.1.0_r1
 XDROID_SOURCE=github.com/xdroid-oss
 AOSP_TAG=android-12.1.0_r1
 XDROID_BRANCH_NEW=twelve-dev
