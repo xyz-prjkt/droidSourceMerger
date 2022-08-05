@@ -3,10 +3,10 @@
 # Copyright (C) 2021 a xyzprjkt property
 #
 
-XDROID_VERSION=r15
+XDROID_VERSION=r17
 XDROID_BRANCH_OLD=twelve
 XDROID_SOURCE=github.com/xdroid-oss
-AOSP_TAG=android-12.1.0_r11
+AOSP_TAG=android-12.1.0_r24
 XDROID_BRANCH_NEW=twelve-${AOSP_TAG}
 # XDROID_BRANCH_NEW=INA.XD.12.0-${XDROID_VERSION}.${AOSP_TAG} // Migration Purpose
 XDROID_REVISION=${XDROID_BRANCH_NEW}
