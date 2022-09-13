@@ -3,8 +3,8 @@
 # Copyright (C) 2021-2022 a xyzprjkt property
 #
 
-AOSP_TAG=android-13.0.0_r4
-XD_VERSION=r4
+AOSP_TAG=android-13.0.0_r6
+XD_VERSION=r6
 XD_BRANCH=thirteen
 XD_BRANCH_NEW=thirteen_${AOSP_TAG}
 XD_REPO_LIST=(bootable_recovery
