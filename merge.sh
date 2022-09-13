@@ -12,30 +12,25 @@ XD_REPO_LIST=(bootable_recovery
 			  bionic
 			  build
 			  build_soong
-			  build_libcore
+			  libcore
 			  external_e2fsprogs
 			  external_gptfdisk
 			  external_exfatprogs
 			  external_mksh
-			  external_ntfs-3g
-			  external_json-c
 			  external_selinux
 			  external_tinycompress
 			  external_sqlite
-			  external_tinyxml
 			  frameworks_av
 			  frameworks_base
 			  frameworks_native
 			  hardware_libhardware
-			  packages_apps_Bluetooth
 			  packages_apps_Nfc
 			  packages_apps_ThemePicker
 			  packages_apps_Settings
 			  packages_apps_WallpaperPicker2
 			  packages_modules_adb
 			  packages_modules_Connectivity
-			  system_update-engine
-			  system_bt
+			  system_update_engine
 			  system_core
 			  system_sepolicy
 			  system_vold)
