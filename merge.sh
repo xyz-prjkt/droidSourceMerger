@@ -3,7 +3,7 @@
 # Copyright (C) 2021-2022 a xyzprjkt property
 #
 
-AOSP_TAG=android-13.0.0_r8
+AOSP_TAG=android-13.0.0_r14
 XD_VERSION=r10
 XD_BRANCH=thirteen
 XD_BRANCH_NEW=thirteen_${AOSP_TAG}
