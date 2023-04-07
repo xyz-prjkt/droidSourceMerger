@@ -3,10 +3,10 @@
 # Copyright (C) 2021-2022 a xyzprjkt property
 #
 
-AOSP_TAG=android-13.0.0_r18
-XD_VERSION=r10
-XD_BRANCH=thirteen
-XD_BRANCH_NEW=thirteen_${AOSP_TAG}
+AOSP_TAG=android-13.0.0_r32
+XD_VERSION=secretbuild
+XD_BRANCH=thirteen_android-13.0.0_r15
+XD_BRANCH_NEW=thirteen
 XD_REPO_LIST=(bootable_recovery
 			  art
 			  bionic
@@ -51,11 +51,11 @@ tg_post_msg "<b>xdroid Source Updater</b>%0A<b>xdroid Revision</b>: <code>${XD_V
 for str in ${XD_REPO_LIST[@]}; do
   git clone https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-oss/xd_${str} xd_${str} -b ${XD_BRANCH}
   cd xd_${str}
-  git remote add aosp https://android.googlesource.com/platform/${str//_//}
-  git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
-  git push origin ${XD_BRANCH}
+  # git remote add aosp https://android.googlesource.com/platform/${str//_//}
+  # git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
+  # git push origin ${XD_BRANCH}
   git checkout -b ${XD_BRANCH_NEW}
-  git push origin ${XD_BRANCH_NEW}
+  git push origin -f ${XD_BRANCH_NEW}
   tg_post_msg "<b>xdroid Source Updater</b>%0A<code>${str} was pushed in ${XD_BRANCH_NEW}</code>"
   cd ../
 done
