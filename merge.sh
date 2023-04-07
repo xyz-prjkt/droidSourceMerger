@@ -5,8 +5,8 @@
 
 AOSP_TAG=android-13.0.0_r32
 XD_VERSION=secretbuild
-XD_BRANCH=thirteen_android-13.0.0_r15
-XD_BRANCH_NEW=thirteen
+XD_BRANCH=thirteen
+XD_BRANCH_NEW=thirteen_${AOSP_TAG}
 XD_REPO_LIST=(bootable_recovery
 			  art
 			  bionic
