@@ -3,10 +3,10 @@
 # Copyright (C) 2021-2022 a xyzprjkt property
 #
 
-AOSP_TAG=android-13.0.0_r32
-XD_VERSION=secretbuild
-XD_BRANCH=thirteen
-XD_BRANCH_NEW=thirteen_${AOSP_TAG}
+AOSP_TAG=android-14.0.0_r2
+XD_VERSION=14.0.1
+XD_BRANCH=fourteen
+XD_BRANCH_NEW=fourteen
 XD_REPO_LIST=(bootable_recovery
 			  art
 			  bionic
@@ -49,7 +49,7 @@ tg_post_msg "<b>xdroid Source Updater</b>%0A<b>xdroid Revision</b>: <code>${XD_V
 
 
 for str in ${XD_REPO_LIST[@]}; do
-  git clone https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-oss/xd_${str} xd_${str} -b ${XD_BRANCH}
+  git clone https://$GH_USERNAME:$GH_TOKEN@github.com/xdroid-oss/xd_${str} xd_${str}
   cd xd_${str}
   # git remote add aosp https://android.googlesource.com/platform/${str//_//}
   # git fetch aosp ${AOSP_TAG} && git merge FETCH_HEAD
